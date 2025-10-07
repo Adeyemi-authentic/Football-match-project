@@ -1,0 +1,14 @@
+# ignore enviroment files 
+.env
+# ignore congig file
+
+config.py
+
+# ignore python cache and checkpoints
+
+__pycache__/
+.ipynb_chekpoints/
+
+# ignore IDE/project -specific folders
+
+.idea/
