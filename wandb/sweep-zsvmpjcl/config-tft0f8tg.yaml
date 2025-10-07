@@ -1,0 +1,10 @@
+wandb_version: 1
+
+dropout_prob:
+  value: 0.33686330556105504
+hidden_size:
+  value: 56
+learning_rate:
+  value: 0.00985505115694874
+num_epochs:
+  value: 750

@@ -1,0 +1,27 @@
+Epoch[40/500], Train Loss: 0.7639, Val Acc: 0.6554
+Epoch[80/500], Train Loss: 0.7233, Val Acc: 0.6498
+Epoch[120/500], Train Loss: 0.6972, Val Acc: 0.6554
+Epoch[160/500], Train Loss: 0.6814, Val Acc: 0.6610
+Epoch[200/500], Train Loss: 0.6716, Val Acc: 0.6582
+Epoch[240/500], Train Loss: 0.6613, Val Acc: 0.6639
+Epoch[280/500], Train Loss: 0.6563, Val Acc: 0.6681
+Epoch[320/500], Train Loss: 0.6462, Val Acc: 0.6667
+Epoch[360/500], Train Loss: 0.6470, Val Acc: 0.6737
+Epoch[400/500], Train Loss: 0.6393, Val Acc: 0.6835
+Epoch[440/500], Train Loss: 0.6395, Val Acc: 0.6765
+Epoch[480/500], Train Loss: 0.6367, Val Acc: 0.6807
+
+Final Test Accuracy: 0.6807
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.67      0.75      0.70       208
+           1       0.61      0.37      0.47       187
+           2       0.71      0.82      0.76       316
+
+    accuracy                           0.68       711
+   macro avg       0.66      0.65      0.64       711
+weighted avg       0.67      0.68      0.67       711
+
+Feature importance computation failed: name 'feature_names' is not defined

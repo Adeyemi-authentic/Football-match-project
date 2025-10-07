@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Local\Temp\ipykernel_8904\2683567301.py", line 87, in train_model
+    outputs = model(X_train_device)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Local\Temp\ipykernel_8904\2683567301.py", line 20, in forward
+    x = torch.relu(self.fc1(x))
+                   ^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\Lib\site-packages\torch\nn\modules\linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (6399x16 and 14x56)
