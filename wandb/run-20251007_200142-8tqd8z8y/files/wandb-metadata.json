@@ -1,0 +1,26 @@
+{
+  "os": "Windows-10-10.0.19045-SP0",
+  "python": "CPython 3.11.5",
+  "startedAt": "2025-10-07T19:01:42.745240Z",
+  "program": "PycharmProjects/deply/ALL league prediction with pytorch and wandb.ipynb",
+  "git": {
+    "remote": "https://github.com/Adeyemi-authentic/Football-match-project.git",
+    "commit": "bc46b3d83a176394dfcd4566dc1c2d9005c62531"
+  },
+  "email": "adey004azeez@gmail.com",
+  "root": "C:\\Users\\USER\\PycharmProjects\\deply",
+  "host": "DESKTOP-O1H15VD",
+  "executable": "C:\\Users\\USER\\anaconda3\\python.exe",
+  "cpu_count": 2,
+  "cpu_count_logical": 4,
+  "disk": {
+    "/": {
+      "total": "254634999808",
+      "used": "246985887744"
+    }
+  },
+  "memory": {
+    "total": "8464732160"
+  },
+  "writerId": "4x17dn913e4s0v1ncwq50s5sbq826ow0"
+}

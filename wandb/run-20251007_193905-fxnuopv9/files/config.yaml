@@ -1,0 +1,85 @@
+_wandb:
+    value:
+        cli_version: 0.22.0
+        e:
+            503o2fn7jodibjxux3k9s6pnay00rg8x:
+                cpu_count: 2
+                cpu_count_logical: 4
+                disk:
+                    /:
+                        total: "254634999808"
+                        used: "245899288576"
+                email: adey004azeez@gmail.com
+                executable: C:\Users\USER\anaconda3\python.exe
+                git:
+                    commit: bc46b3d83a176394dfcd4566dc1c2d9005c62531
+                    remote: https://github.com/Adeyemi-authentic/Football-match-project.git
+                host: DESKTOP-O1H15VD
+                memory:
+                    total: "8464732160"
+                os: Windows-10-10.0.19045-SP0
+                program: PycharmProjects/deply/ALL league prediction with pytorch and wandb.ipynb
+                python: CPython 3.11.5
+                root: C:\Users\USER\PycharmProjects\deply
+                startedAt: "2025-10-07T18:39:05.398127Z"
+                writerId: 503o2fn7jodibjxux3k9s6pnay00rg8x
+        m: []
+        python_version: 3.11.5
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+            "2":
+                - 1
+                - 5
+                - 53
+            "3":
+                - 2
+                - 14
+            "4": 3.11.5
+            "5": 0.22.0
+            "8":
+                - 1
+                - 3
+            "12": 0.22.0
+            "13": windows-amd64
+        visualize:
+            confusion_matrix:
+                panel_config:
+                    fieldSettings:
+                        Actual: Actual
+                        Predicted: Predicted
+                        nPredictions: nPredictions
+                    panelDefId: wandb/confusion_matrix/v1
+                    stringSettings:
+                        title: Confusion Matrix Curve
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: confusion_matrix_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+dropout_prob:
+    value: 0.33802811040240854
+hidden_size:
+    value: 42
+learning_rate:
+    value: 0.016735835555101875
+num_epochs:
+    value: 500

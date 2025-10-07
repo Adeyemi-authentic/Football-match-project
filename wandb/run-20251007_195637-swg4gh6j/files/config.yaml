@@ -1,0 +1,55 @@
+_wandb:
+    value:
+        cli_version: 0.22.0
+        e:
+            ovi547c21rshhtnvuk8n0cm6iphjw5go:
+                cpu_count: 2
+                cpu_count_logical: 4
+                disk:
+                    /:
+                        total: "254634999808"
+                        used: "245310943232"
+                email: adey004azeez@gmail.com
+                executable: C:\Users\USER\anaconda3\python.exe
+                git:
+                    commit: bc46b3d83a176394dfcd4566dc1c2d9005c62531
+                    remote: https://github.com/Adeyemi-authentic/Football-match-project.git
+                host: DESKTOP-O1H15VD
+                memory:
+                    total: "8464732160"
+                os: Windows-10-10.0.19045-SP0
+                program: PycharmProjects/deply/ALL league prediction with pytorch and wandb.ipynb
+                python: CPython 3.11.5
+                root: C:\Users\USER\PycharmProjects\deply
+                startedAt: "2025-10-07T18:56:37.293553Z"
+                writerId: ovi547c21rshhtnvuk8n0cm6iphjw5go
+        m: []
+        python_version: 3.11.5
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+            "2":
+                - 1
+                - 5
+                - 53
+            "3":
+                - 2
+                - 13
+                - 14
+            "4": 3.11.5
+            "5": 0.22.0
+            "8":
+                - 1
+                - 3
+            "12": 0.22.0
+            "13": windows-amd64
+dropout_prob:
+    value: 0.32383727210215263
+hidden_size:
+    value: 42
+learning_rate:
+    value: 0.016245172617468006
+num_epochs:
+    value: 1000

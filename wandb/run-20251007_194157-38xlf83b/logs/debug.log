@@ -1,0 +1,34 @@
+2025-10-07 19:41:57,708 INFO    Thread-51 (_run_job):9756 [wandb_setup.py:_flush():81] Current SDK version is 0.22.0
+2025-10-07 19:41:57,708 INFO    Thread-51 (_run_job):9756 [wandb_setup.py:_flush():81] Configure stats pid to 9756
+2025-10-07 19:41:57,708 INFO    Thread-51 (_run_job):9756 [wandb_setup.py:_flush():81] Loading settings from C:\Users\USER\.config\wandb\settings
+2025-10-07 19:41:57,709 INFO    Thread-51 (_run_job):9756 [wandb_setup.py:_flush():81] Loading settings from C:\Users\USER\PycharmProjects\deply\wandb\settings
+2025-10-07 19:41:57,709 INFO    Thread-51 (_run_job):9756 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-10-07 19:41:57,709 INFO    Thread-51 (_run_job):9756 [wandb_init.py:setup_run_log_directory():686] Logging user logs to C:\Users\USER\PycharmProjects\deply\wandb\run-20251007_194157-38xlf83b\logs\debug.log
+2025-10-07 19:41:57,709 INFO    Thread-51 (_run_job):9756 [wandb_init.py:setup_run_log_directory():687] Logging internal logs to C:\Users\USER\PycharmProjects\deply\wandb\run-20251007_194157-38xlf83b\logs\debug-internal.log
+2025-10-07 19:41:57,709 INFO    Thread-51 (_run_job):9756 [wandb_init.py:monkeypatch_ipython():605] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001FD5725BB50>
+2025-10-07 19:41:57,709 INFO    Thread-51 (_run_job):9756 [wandb_init.py:init():813] calling init triggers
+2025-10-07 19:41:57,709 INFO    Thread-51 (_run_job):9756 [wandb_init.py:init():818] wandb.init called with sweep_config: {'dropout_prob': 0.37695897300754216, 'hidden_size': 42, 'learning_rate': 0.008127518692028466, 'num_epochs': 500}
+config: {'_wandb': {}}
+2025-10-07 19:41:57,709 INFO    Thread-51 (_run_job):9756 [wandb_init.py:init():861] starting backend
+2025-10-07 19:41:59,983 INFO    Thread-51 (_run_job):9756 [wandb_init.py:init():864] sending inform_init request
+2025-10-07 19:41:59,990 INFO    Thread-51 (_run_job):9756 [wandb_init.py:init():872] backend started and connected
+2025-10-07 19:42:00,002 INFO    Thread-51 (_run_job):9756 [wandb_run.py:_config_callback():1392] config_cb None None {'dropout_prob': 0.37695897300754216, 'hidden_size': 42, 'learning_rate': 0.008127518692028466, 'num_epochs': 500}
+2025-10-07 19:42:00,004 INFO    Thread-51 (_run_job):9756 [wandb_run.py:_label_probe_notebook():1330] probe notebook
+2025-10-07 19:42:00,005 INFO    Thread-51 (_run_job):9756 [wandb_run.py:_label_probe_notebook():1340] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2025-10-07 19:42:00,005 INFO    Thread-51 (_run_job):9756 [wandb_init.py:init():942] updated telemetry
+2025-10-07 19:42:00,101 INFO    Thread-51 (_run_job):9756 [wandb_init.py:init():966] communicating run to backend with 90.0 second timeout
+2025-10-07 19:42:01,136 INFO    Thread-51 (_run_job):9756 [wandb_init.py:init():1017] starting run threads in backend
+2025-10-07 19:42:01,885 INFO    Thread-51 (_run_job):9756 [wandb_run.py:_console_start():2506] atexit reg
+2025-10-07 19:42:01,885 INFO    Thread-51 (_run_job):9756 [wandb_run.py:_redirect():2354] redirect: wrap_raw
+2025-10-07 19:42:01,885 INFO    Thread-51 (_run_job):9756 [wandb_run.py:_redirect():2423] Wrapping output streams.
+2025-10-07 19:42:01,886 INFO    Thread-51 (_run_job):9756 [wandb_run.py:_redirect():2446] Redirects installed.
+2025-10-07 19:42:01,887 INFO    Thread-51 (_run_job):9756 [wandb_init.py:init():1057] run started, returning control to user process
+2025-10-07 19:42:08,710 INFO    Thread-51 (_run_job):9756 [wandb_run.py:_config_callback():1392] config_cb ('_wandb', 'visualize', 'confusion_matrix') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': 'Confusion Matrix Curve'}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'confusion_matrix_table'}], 'fields': []}]}]}}} None
+2025-10-07 19:42:10,272 INFO    Thread-51 (_run_job):9756 [wandb_run.py:_finish():2272] finishing run adey004azeez-hiipower-academy/football-ml-prediction/38xlf83b
+2025-10-07 19:42:10,274 INFO    Thread-51 (_run_job):9756 [jupyter.py:save_history():480] not saving jupyter history
+2025-10-07 19:42:10,274 INFO    Thread-51 (_run_job):9756 [jupyter.py:save_ipynb():404] not saving jupyter notebook
+2025-10-07 19:42:10,275 INFO    Thread-51 (_run_job):9756 [wandb_init.py:_jupyter_teardown():590] cleaning up jupyter logic
+2025-10-07 19:42:10,276 INFO    Thread-51 (_run_job):9756 [wandb_run.py:_atexit_cleanup():2471] got exitcode: 0
+2025-10-07 19:42:10,277 INFO    Thread-51 (_run_job):9756 [wandb_run.py:_restore():2453] restore
+2025-10-07 19:42:10,277 INFO    Thread-51 (_run_job):9756 [wandb_run.py:_restore():2459] restore done
+2025-10-07 19:42:13,823 INFO    Thread-51 (_run_job):9756 [wandb_run.py:_footer_sync_info():3867] logging synced files

@@ -1,0 +1,1 @@
+{"columns": ["Actual", "Predicted", "nPredictions"], "data": [["Away Win", "Away Win", 153.0], ["Away Win", "Draw", 16.0], ["Away Win", "Home Win", 39.0], ["Draw", "Away Win", 49.0], ["Draw", "Draw", 64.0], ["Draw", "Home Win", 74.0], ["Home Win", "Away Win", 36.0], ["Home Win", "Draw", 25.0], ["Home Win", "Home Win", 255.0]]}
