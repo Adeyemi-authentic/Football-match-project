@@ -82,9 +82,9 @@ class MatchFeatures(BaseModel):
     features: List[float]
 
 # Model parameters
-input_size = 16
-hidden_size = 64
-dropout_prob = 0.5
+input_size = 14
+hidden_size = 36
+dropout_prob = 0.35
 output_dim = 3
 
 # Load the model
@@ -246,7 +246,7 @@ def main():
     
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
-        if st.button("🔮 Predict Match Outcome", use_container_width=True):
+        if st.button(" Predict Match Outcome", use_container_width=True):
             if not home_team or not away_team:
                 st.error("Please enter both team names!")
             else:
