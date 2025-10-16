@@ -216,7 +216,7 @@ def main():
         home_team = st.text_input("Home Team Name", placeholder="e.g., Manchester United")
         home_goals_scored = st.number_input("Total Goals Scored", min_value=0.0, step=0.1, key="home_scored")
         home_goals_conceded = st.number_input("Total Goals Conceded", min_value=0.0, step=0.1, key="home_conceded")
-        home_goal_ratio = st.number_input("Goal Ratio", min_value=0.0, step=0.01, key="home_ratio")
+        #home_goal_ratio = st.number_input("Goal Ratio", min_value=0.0, step=0.01, key="home_ratio")
         home_points = st.number_input("Total Points", min_value=0.0, step=1.0, key="home_points")
         home_wins = st.number_input("Wins", min_value=0.0, step=1.0, key="home_wins")
         home_draws = st.number_input("Draws", min_value=0.0, step=1.0, key="home_draws")
@@ -227,7 +227,7 @@ def main():
         away_team = st.text_input("Away Team Name", placeholder="e.g., Liverpool")
         away_goals_scored = st.number_input("Total Goals Scored", min_value=0.0, step=0.1, key="away_scored")
         away_goals_conceded = st.number_input("Total Goals Conceded", min_value=0.0, step=0.1, key="away_conceded")
-        away_goal_ratio = st.number_input("Goal Ratio", min_value=0.0, step=0.01, key="away_ratio")
+        #away_goal_ratio = st.number_input("Goal Ratio", min_value=0.0, step=0.01, key="away_ratio")
         away_points = st.number_input("Total Points", min_value=0.0, step=1.0, key="away_points")
         away_wins = st.number_input("Wins", min_value=0.0, step=1.0, key="away_wins")
         away_draws = st.number_input("Draws", min_value=0.0, step=1.0, key="away_draws")
@@ -236,7 +236,7 @@ def main():
     # Prepare features
     features = [
         home_goals_scored, away_goals_scored, home_goals_conceded, away_goals_conceded,
-        home_goal_ratio, away_goal_ratio, home_points, away_points,
+        home_points, away_points,
         home_wins, home_draws, home_losses, away_wins, away_draws, away_losses,
         0.0, 0.0  # Placeholder for any additional features
     ]
