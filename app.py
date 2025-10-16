@@ -19,9 +19,9 @@ class FootballML(nn.Module):
         return output
 
 
-input_size = 16
-hidden_size = 64
-dropout_prob = 0.5
+input_size = 14
+hidden_size = 36
+dropout_prob = 0.35
 output_dim = 3
 
 model = FootballML(input_size, hidden_size, output_dim, dropout_prob)
@@ -33,7 +33,7 @@ app = FastAPI()
 
 
 class MatchFeatures(BaseModel):
-    features: List[float]  # Fixed: Use List[float] instead of list[16.0]
+    features: List[float]  # Fixed: Use List[float] instead of list[14.0]
 
 
 @app.get("/")
