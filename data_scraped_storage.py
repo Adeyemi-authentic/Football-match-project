@@ -656,8 +656,14 @@ from sqlalchemy import create_engine
 # Using secure configuration
 from config import get_sqlalchemy_engine
 
-engine = get_sqlalchemy_engine()
-data2.to_sql("matches_data", schema="FootballML", con=engine, if_exists='replace', index=False)
+import os
+
+if os.getenv("GITHUB_ACTIONS") == "true":
+    print(" Running in GitHub Actions — skipping database upload.")
+else:
+    engine = get_sqlalchemy_engine()
+    data2.to_sql("matches_data", schema="FootballML", con=engine, if_exists='replace', index=False)
+    print("Data uploaded to database.")
 
 
 
