@@ -34,7 +34,7 @@ Football Prediction System
 - **Storage**: CSV files → MySQL database
 - **Coverage**: Major European leagues with comprehensive match statistics
 
-## 🧹 Data Preprocessing
+## Data Preprocessing
 
 ### Data Cleaning
 - ✅ Data type validation and formatting
@@ -125,7 +125,7 @@ Football Prediction System
 ```bash
 # Clone the repository
 git clone [repository-url]
-cd FOOTBALL-DEPLOY
+
 
 # Create virtual environment (recommended)
 python -m venv venv
@@ -207,7 +207,7 @@ This project is licensed under the MIT License
 
 ## Contact
 
-For questions or collaboration opportunities, please open an issue or reach out via [adey004azeez@gmail.com].
+For questions or collaboration opportunities, please open an issue or reach out via  email adey004azeez@gmail.com.
 
 ---
 

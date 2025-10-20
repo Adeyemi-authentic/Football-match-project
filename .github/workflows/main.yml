@@ -1,0 +1,62 @@
+name: Retrain ML App
+
+on:
+  push:
+    branches: [ main, bee ]
+  schedule:
+    - cron: '0 8 * * 2'  # Every Tuesday at 8 AM UTC
+  workflow_dispatch:  # allows manual trigger from GitHub Actions tab
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      # ------------------------
+      # Run data scraper
+      # ------------------------
+      - name: Run data scraper
+        env:
+          DB_USERNAME: ${{ secrets.DB_USERNAME }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          API_KEY: ${{ secrets.API_KEY }}
+        run: python data_scraped_storage.py
+
+      # ------------------------
+      # Retrain the ML model
+      # ------------------------
+      - name: Retrain model
+        env:
+          DB_USERNAME: ${{ secrets.DB_USERNAME }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          API_KEY: ${{ secrets.API_KEY }}
+        run: python train.py
+
+      # ------------------------
+      # Commit and push the updated model
+      # ------------------------
+      - name: Commit and push new model
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add model.pkl
+          git commit -m "Auto retrain model on schedule" || echo "No changes to commit"
+          git push
