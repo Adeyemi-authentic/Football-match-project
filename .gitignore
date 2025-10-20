@@ -1,8 +1,5 @@
 # ignore enviroment files 
 .env
-# ignore congig file
-
-config.py
 
 # ignore python cache and checkpoints
 
