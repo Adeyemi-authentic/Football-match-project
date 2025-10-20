@@ -1,3 +1,11 @@
 fastapi
 uvicorn
 torch
+streamlit
+pandas
+scikit-learn
+mysql-connector-python
+SQLAlchemy
+pymysql
+python-dotenv
+requests
