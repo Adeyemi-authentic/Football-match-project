@@ -1,8 +1,9 @@
-# config.py - DO NOT commit this file to version control
-# Add this file to .gitignore
 
 import os
 from dotenv import load_dotenv
+from sqlalchemy import create_engine
+import mysql.connector
+from urllib.parse import quote_plus
 
 # Load environment variables from .env file
 load_dotenv()
@@ -38,3 +39,4 @@ def get_sqlalchemy_engine():
     
     connection_string = f'mysql+pymysql://{username}:{password}@{host}:{port}/{database}'
     return create_engine(connection_string)
+

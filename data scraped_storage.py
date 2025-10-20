@@ -1,7 +1,8 @@
 import pandas as pd
 import requests
 import numpy as np
-API_KEY = "53267ff6599941f39feca4342aadee5f"
+from config import API_KEYS
+API_KEY = API_KEYS.get("API_KEY")
 url = " http://api.football-data.org/v4/competitions/PPL/matches"
 headers = {
     "X-Auth-Token": API_KEY
@@ -168,8 +169,7 @@ for team in teams:
     sa_df.loc[sa_df['away_team'] == team, 'Away Total Points'] = away_points
 
 sa_df.to_csv(r"C:\Users\USER\OneDrive\Documents\Football Api datasets2\seria A.csv", index=False)
-
-API_KEY = "53267ff6599941f39feca4342aadee5f"
+API_KEY = API_KEYS.get("API_KEY")
 b_url = " http://api.football-data.org/v4/competitions/BL1/matches"
 
 headers = {
@@ -255,7 +255,7 @@ for team in teams:
 
 b_df.to_csv(r"C:\Users\USER\OneDrive\Documents\Football Api datasets2\bundesliga data.csv", index=False)
 
-API_KEY = "53267ff6599941f39feca4342aadee5f"
+API_KEY = API_KEYS.get("API_KEY")
 f_url = " http://api.football-data.org/v4/competitions/FL1/matches"
 
 headers = {
@@ -340,7 +340,7 @@ for team in teams:
 
 f_df.to_csv(r"C:\Users\USER\OneDrive\Documents\Football Api datasets2\ligue1.csv", index=False)
 
-API_KEY = "53267ff6599941f39feca4342aadee5f"
+API_KEY = API_KEYS.get("API_KEY")
 laliga_url = " http://api.football-data.org/v4/competitions/PD/matches"
 
 headers = {
@@ -426,7 +426,7 @@ for team in teams:
 
 laliga_df.to_csv(r"C:\Users\USER\OneDrive\Documents\Football Api datasets2\laliga.csv", index=False)
 
-API_KEY = "53267ff6599941f39feca4342aadee5f"
+API_KEY = API_KEYS.get("API_KEY")
 ned_url = " http://api.football-data.org/v4/competitions/DED/matches"
 
 headers = {
@@ -512,7 +512,7 @@ for team in teams:
 
 n_df.to_csv(r"C:\Users\USER\OneDrive\Documents\Football Api datasets2\eredivise.csv", index=False)
 
-API_KEY = "53267ff6599941f39feca4342aadee5f"
+API_KEY = API_KEYS.get("API_KEY")
 url = " http://api.football-data.org/v4/competitions/PL/matches"
 headers = {
     "X-Auth-Token": API_KEY
