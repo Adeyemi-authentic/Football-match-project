@@ -35,7 +35,7 @@ jobs:
           DB_PORT: ${{ secrets.DB_PORT }}
           DB_NAME: ${{ secrets.DB_NAME }}
           API_KEY: ${{ secrets.API_KEY }}
-        run: python "data scraped_storage.py"
+        run: python data_scraped_storage.py
 
       # ------------------------
       # Retrain the ML model
