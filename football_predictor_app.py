@@ -63,16 +63,20 @@ st.markdown("""
 
 # PyTorch Model Definition
 class FootballML(nn.Module):
-    def __init__(self, input_size, hidden_size, output_dim, dropout_prob=0.3):
+    def __init__(self,input_size,hidden_size,hidden_size2,output_dim,dropout_prob=0.35):
         super().__init__()
-        self.fc1 = nn.Linear(input_size, hidden_size)
-        self.dropout = nn.Dropout(dropout_prob)
-        self.fc2 = nn.Linear(hidden_size, output_dim)
+        self.fc1=nn.Linear(input_size,hidden_size)
+        self.dropout1 = nn.Dropout(dropout_prob)
+        self.fc2=nn.Linear(hidden_size,hidden_size2)
+        self.dropout2=nn.Dropout(dropout_prob)
+        self.fc3=nn.Linear(hidden_size2,output_dim)
 
     def forward(self, x):
-        x = torch.relu(self.fc1(x))
-        x = self.dropout(x)
-        output = self.fc2(x)
+        x = torch.relu(self.fc1(x))  # Apply first linear layer and activation
+        x = self.dropout1(x)    # Apply dropout1
+        x=torch.relu(self.fc2(x))  # second hidden layer activation
+        x=self.dropout2(x)
+        output = self.fc3(x)         # Final linear layer
         return output
 
 # FastAPI Backend Setup
@@ -82,16 +86,17 @@ class MatchFeatures(BaseModel):
     features: List[float]
 
 # Model parameters
-input_size = 14
-hidden_size = 36
-dropout_prob = 0.35
-output_dim = 3
+input_size=14
+hidden_size=36
+hidden_size2=18
+dropout_prob=0.35
+output_dim=3
 
 # Load the model
 @st.cache_resource
 def load_model():
     try:
-        model = FootballML(input_size, hidden_size, output_dim, dropout_prob)
+        model = FootballML(input_size, hidden_size,hidden_size2,output_dim, dropout_prob)
         model.load_state_dict(torch.load("model.pth", map_location=torch.device('cpu')))
         model.eval()
         return model

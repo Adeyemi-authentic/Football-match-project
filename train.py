@@ -32,7 +32,7 @@ y=data['Result']
 sc=StandardScaler()
 X=sc.fit_transform(X)
 
-X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.1,random_state=42)
+X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=42)
 
 print(X_train.shape,X_test.shape,y_train.shape,y_test.shape)
 
@@ -50,20 +50,25 @@ print(np.unique(y_test_tensor, return_counts=True))
 
 
 class FootballML(nn.Module):
-    def __init__(self,input_size,hidden_size,output_dim,dropout_prob=0.4):
+    def __init__(self,input_size,hidden_size,hidden_size2,output_dim,dropout_prob=0.35):
         super().__init__()
         self.fc1=nn.Linear(input_size,hidden_size)
-        self.dropout = nn.Dropout(dropout_prob)
-        self.fc2=nn.Linear(hidden_size,output_dim)
+        self.dropout1 = nn.Dropout(dropout_prob)
+        self.fc2=nn.Linear(hidden_size,hidden_size2)
+        self.dropout2=nn.Dropout(dropout_prob)
+        self.fc3=nn.Linear(hidden_size2,output_dim)
 
     def forward(self, x):
         x = torch.relu(self.fc1(x))  # Apply first linear layer and activation
-        x = self.dropout(x)          # Apply dropout
-        output = self.fc2(x)         # Final linear layer
+        x = self.dropout1(x)    # Apply dropout1
+        x=torch.relu(self.fc2(x))  # second hidden layer activation
+        x=self.dropout2(x)
+        output = self.fc3(x)         # Final linear layer
         return output
 
 input_size=14
 hidden_size=36
+hidden_size2=18
 dropout_prob=0.35
 output_dim=3
 
@@ -77,9 +82,9 @@ class_weights = compute_class_weight('balanced', classes=classes, y=y_train)
 class_weights = torch.tensor(class_weights, dtype=torch.float32)
 
 
-model=FootballML(input_size,hidden_size,output_dim,dropout_prob)
+model=FootballML(input_size,hidden_size,hidden_size2,output_dim,dropout_prob)
 criterion = nn.CrossEntropyLoss(weight=class_weights)
-optimizer=optim.Adam(model.parameters(),lr=0.02)
+optimizer=optim.Adam(model.parameters(),lr=0.01)
 
 num_epochs=660
 
