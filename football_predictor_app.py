@@ -87,7 +87,7 @@ class MatchFeatures(BaseModel):
 
 # Model parameters
 input_size=14
-hidden_size=36
+hidden_size=42
 hidden_size2=18
 dropout_prob=0.35
 output_dim=3

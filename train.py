@@ -67,7 +67,7 @@ class FootballML(nn.Module):
         return output
 
 input_size=14
-hidden_size=36
+hidden_size=42
 hidden_size2=18
 dropout_prob=0.35
 output_dim=3
@@ -84,9 +84,9 @@ class_weights = torch.tensor(class_weights, dtype=torch.float32)
 
 model=FootballML(input_size,hidden_size,hidden_size2,output_dim,dropout_prob)
 criterion = nn.CrossEntropyLoss(weight=class_weights)
-optimizer=optim.Adam(model.parameters(),lr=0.01)
+optimizer=optim.Adam(model.parameters(),lr=0.008)
 
-num_epochs=660
+num_epochs=880
 
 for epoch in range(num_epochs):
     outputs=model(X_train_tensor)
@@ -94,7 +94,7 @@ for epoch in range(num_epochs):
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
-    if (epoch +1) % 60 ==0:
+    if (epoch +1) % 80 ==0:
         print(f"Epoch[{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}")
     
     
