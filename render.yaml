@@ -1,0 +1,24 @@
+# Render Blueprint. Auto-deploy is off: deploy from the dashboard with
+# "Manual Deploy -> Deploy latest commit" after checking the retrained model.
+services:
+  - type: web
+    name: football-predictor
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-render.txt
+    startCommand: streamlit run football_predictor_app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    autoDeployTrigger: "off"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+
+  - type: web
+    name: football-predictor-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-render.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    autoDeployTrigger: "off"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9

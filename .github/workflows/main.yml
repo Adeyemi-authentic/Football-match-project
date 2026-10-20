@@ -7,6 +7,9 @@ on:
     - cron: '0 8 * * 2'  # Every Tuesday at 8 AM UTC
   workflow_dispatch:  # allows manual trigger from GitHub Actions tab
 
+permissions:
+  contents: write  # needed to push the retrained model
+
 jobs:
   retrain:
     runs-on: ubuntu-latest
@@ -35,19 +38,15 @@ jobs:
           DB_PORT: ${{ secrets.DB_PORT }}
           DB_NAME: ${{ secrets.DB_NAME }}
           API_KEY: ${{ secrets.API_KEY }}
+          # Update when a new season starts; the free API tier allows recent seasons
+          SEASONS: 2024,2025,2026
         run: python data_scraped_storage.py
 
       # ------------------------
       # Retrain the ML model
       # ------------------------
+      # Trains on data/matches_data.csv written by the scraper step above
       - name: Retrain model
-        env:
-          DB_USERNAME: ${{ secrets.DB_USERNAME }}
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          DB_HOST: ${{ secrets.DB_HOST }}
-          DB_PORT: ${{ secrets.DB_PORT }}
-          DB_NAME: ${{ secrets.DB_NAME }}
-          API_KEY: ${{ secrets.API_KEY }}
         run: python train.py
 
       # ------------------------
@@ -57,6 +56,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add model.pkl
+          git add model.json
           git commit -m "Auto retrain model on schedule" || echo "No changes to commit"
           git push

@@ -1,12 +1,18 @@
-# ignore enviroment files 
+# ignore enviroment files
 .env
+venv/
+.venv/
 
 # ignore python cache and checkpoints
 
 __pycache__/
-.ipynb_chekpoints/
+.ipynb_checkpoints/
+
+# scraped data and local experiment runs
+data/
+wandb/
 
 # ignore IDE/project -specific folders
 
 .idea/
-
+.DS_Store

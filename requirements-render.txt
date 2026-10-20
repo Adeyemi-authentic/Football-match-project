@@ -1,0 +1,7 @@
+# Minimal dependencies for serving the apps on Render (no scraping/training).
+# The saved model is plain JSON, so serving needs neither PyTorch nor scikit-learn.
+pandas
+numpy
+streamlit
+fastapi
+uvicorn

@@ -3,9 +3,11 @@ uvicorn
 torch
 streamlit
 pandas
+numpy
 scikit-learn
 mysql-connector-python
 SQLAlchemy
 pymysql
 python-dotenv
 requests
+wandb
