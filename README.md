@@ -2,6 +2,12 @@
 
 A machine learning project that predicts football match outcomes across Europe's top leagues, combining data science with 14 years of football watching experience.
 
+**Try it live:**
+- **Web app:** https://football-predictor-m14h.onrender.com
+- **API:** https://football-predictor-api-usho.onrender.com (interactive docs at [`/docs`](https://football-predictor-api-usho.onrender.com/docs))
+
+Both run on Render's free plan, so the first visit after a quiet spell can take up to a minute while the service wakes up.
+
 ##  Project Overview
 
 This project leverages machine learning to predict match outcomes (Home Win, Draw, Away Win) for major European football leagues. The system processes historical match data and team statistics to generate predictions.
@@ -180,7 +186,13 @@ python-dotenv>=1.0.0
 
 Visit `/docs` endpoint when running the FastAPI server for interactive API documentation (Swagger UI), or `/redoc` for alternative documentation format.
 
-Example: `http://localhost:8000/docs`
+Example: `http://localhost:8000/docs`, or the live docs at https://football-predictor-api-usho.onrender.com/docs
+
+```bash
+curl -X POST https://football-predictor-api-usho.onrender.com/predict \
+  -H "Content-Type: application/json" \
+  -d '{"home_team": "Chelsea FC", "away_team": "AFC Bournemouth"}'
+```
 
 ## Contributing
 
